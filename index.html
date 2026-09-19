@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thayna Auni | Portfólio UGC</title>
+<meta name="description" content="Portfólio de Thayna Auni, UGC creator em Lisboa. Vídeos autênticos para marcas que querem vender com confiança.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Tenor+Sans&display=swap" rel="stylesheet">
+<style>
+:root{
+  --areia:#efe9e1;
+  --offwhite:#fdfcfa;
+  --marrom:#8a7461;
+  --marrom-esc:#6b5849;
+  --nude:#c9b5a3;
+  --texto:#3d342c;
+  --linha:1px solid #d9cdbf;
+  --titulo:'Tenor Sans', Georgia, serif;
+  --corpo:'Jost', system-ui, sans-serif;
+  --gutter:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--areia);color:var(--texto);font-family:var(--corpo);font-weight:300;font-size:1.0625rem;line-height:1.75;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+h1,h2,h3{font-family:var(--titulo);font-weight:400;letter-spacing:.04em;line-height:1.15}
+:focus-visible{outline:2px solid var(--marrom-esc);outline-offset:3px}
+section[id]{scroll-margin-top:72px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--gutter)}
+.sec{padding:clamp(72px,11vw,150px) 0}
+.sec.claro{background:var(--offwhite)}
+.rotulo{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--marrom-esc);font-weight:400}
+.sec-topo{margin-bottom:clamp(40px,6vw,80px)}
+.sec-topo .rotulo{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.sec-topo .rotulo::after{content:"";height:1px;width:64px;background:var(--nude)}
+.sec-topo h2{font-size:clamp(1.9rem,4.4vw,3.2rem)}
+
+/* botões: retangulares, só contorno */
+.btn{display:inline-block;padding:16px 34px;border:1px solid var(--texto);background:transparent;color:var(--texto);font:400 .75rem/1 var(--corpo);letter-spacing:.24em;text-transform:uppercase;cursor:pointer;transition:background .3s,color .3s}
+.btn:hover{background:var(--texto);color:var(--offwhite)}
+.btn.suave{border-color:var(--marrom);color:var(--marrom-esc)}
+.btn.suave:hover{background:var(--marrom);color:var(--offwhite)}
+
+/* placeholders de foto e vídeo */
+.ph{position:relative;display:flex;align-items:flex-end;justify-content:flex-start;background:linear-gradient(160deg,#e6dbcf 0%,#d5c3b1 55%,#c9b5a3 100%);border:var(--linha);overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph figcaption,.ph .legenda{position:relative;z-index:1;padding:14px 16px;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--marrom-esc);background:rgba(253,252,250,.7)}
+.r45{aspect-ratio:4/5}
+.r916{aspect-ratio:9/16}
+
+/* menu */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(239,233,225,.94);border-bottom:var(--linha);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--titulo);font-size:1.05rem;letter-spacing:.22em;text-transform:uppercase}
+.menu{display:flex;gap:clamp(18px,2.6vw,38px)}
+.menu a{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .3s}
+.menu a:hover{border-color:var(--marrom)}
+.burger{display:none;background:none;border:1px solid var(--texto);width:44px;height:44px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:12px;right:12px;height:1px;background:var(--texto);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* capa */
+.capa{padding:calc(64px + clamp(48px,9vw,120px)) 0 clamp(56px,8vw,100px)}
+.capa-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(32px,6vw,96px);align-items:center}
+.capa h1{font-size:clamp(3.2rem,11vw,8.2rem);letter-spacing:.03em;line-height:1;margin:22px 0 32px;overflow-wrap:anywhere}
+.capa .frase{max-width:34rem;font-size:clamp(1.05rem,1.8vw,1.25rem);color:var(--marrom-esc)}
+.botoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.capa-nums{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(48px,7vw,88px);border-top:var(--linha);border-bottom:var(--linha)}
+.capa-nums div{padding:28px 12px;text-align:center;border-left:var(--linha)}
+.capa-nums div:first-child{border-left:0}
+.num{font-family:var(--titulo);font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.1;display:block}
+.num-rot{display:block;margin-top:8px;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--marrom-esc)}
+.marcas{border-top:var(--linha);border-bottom:var(--linha);background:var(--offwhite);padding:18px 0}
+.marcas ul{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 34px}
+.marcas li{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--marrom-esc)}
+
+/* sobre */
+.sobre-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,7vw,110px);align-items:center}
+.sobre p{max-width:34rem;margin-bottom:22px}
+.promessas{margin:34px 0;border-top:var(--linha)}
+.promessas li{display:flex;gap:20px;padding:16px 0;border-bottom:var(--linha)}
+.promessas b{font:400 .75rem/1.9 var(--titulo);letter-spacing:.2em;color:var(--marrom-esc)}
+.assinatura{font-family:var(--titulo);font-size:1.7rem;letter-spacing:.08em;margin-top:12px}
+
+/* destaques */
+.dest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,40px)}
+.card{display:block;background:var(--areia);border:var(--linha);padding:14px;transition:border-color .3s,transform .4s}
+.card:hover{border-color:var(--marrom);transform:translateY(-4px)}
+.card .ph{width:100%}
+.play{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border:1px solid var(--texto);background:rgba(253,252,250,.85);display:grid;place-items:center;z-index:2}
+.play::before{content:"";margin-left:4px;border-left:14px solid var(--texto);border-top:9px solid transparent;border-bottom:9px solid transparent}
+.card .grande{font-family:var(--titulo);font-size:clamp(2rem,3.4vw,2.8rem);margin-top:22px;line-height:1.1}
+.card h3{font-size:1.15rem;margin:14px 0 6px}
+.card p.ctx{font-size:.95rem;color:var(--marrom-esc)}
+
+/* trabalhos */
+.filtros{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
+.filtros button{background:transparent;border:1px solid var(--nude);padding:11px 22px;font:400 .7rem/1 var(--corpo);letter-spacing:.22em;text-transform:uppercase;color:var(--texto);cursor:pointer;transition:background .3s,border-color .3s}
+.filtros button:hover{border-color:var(--marrom)}
+.filtros button[aria-pressed="true"]{background:var(--texto);border-color:var(--texto);color:var(--offwhite)}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,32px)}
+.trab[hidden]{display:none}
+.trab h3{font-size:1.05rem;margin-top:16px}
+.trab p{font-size:.85rem;color:var(--marrom-esc);letter-spacing:.14em;text-transform:uppercase}
+
+/* serviços */
+.serv{display:grid;grid-template-columns:repeat(3,1fr);border-top:var(--linha);border-left:var(--linha)}
+.serv article{padding:clamp(28px,3.4vw,48px);border-right:var(--linha);border-bottom:var(--linha)}
+.serv .n{font-family:var(--titulo);color:var(--marrom);font-size:.85rem;letter-spacing:.24em}
+.serv h3{font-size:1.3rem;margin:18px 0 12px}
+.serv p{font-size:.98rem;color:var(--marrom-esc)}
+
+/* números e depoimentos */
+.sub{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--marrom-esc);margin:clamp(56px,8vw,96px) 0 26px}
+.sub:first-of-type{margin-top:0}
+.metricas{display:grid;grid-template-columns:repeat(4,1fr);border-top:var(--linha);border-bottom:var(--linha)}
+.metricas div{padding:34px 14px;text-align:center;border-left:var(--linha)}
+.metricas div:first-child{border-left:0}
+.resultados{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,32px)}
+.resultados article{border:var(--linha);padding:clamp(26px,3vw,40px);background:var(--areia)}
+.resultados p{font-size:.95rem;color:var(--marrom-esc);margin-top:12px}
+.depos{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.4vw,32px)}
+.depos figure{border:var(--linha);padding:clamp(26px,3vw,42px)}
+.depos blockquote{font-size:1.05rem;margin-bottom:24px}
+.depos figcaption b{display:block;font:400 .78rem/1.6 var(--corpo);letter-spacing:.22em;text-transform:uppercase}
+.depos figcaption span{font-size:.9rem;color:var(--marrom-esc)}
+
+/* contato */
+.contato-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,7vw,110px)}
+form label{display:block;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--marrom-esc);margin-bottom:8px}
+input,textarea{width:100%;background:var(--offwhite);border:1px solid var(--nude);padding:14px 16px;font:300 1rem/1.5 var(--corpo);color:var(--texto);border-radius:0;margin-bottom:22px}
+input:focus,textarea:focus{border-color:var(--marrom-esc)}
+textarea{min-height:150px;resize:vertical}
+.confirma{display:none;border:1px solid var(--marrom);padding:32px;background:var(--offwhite)}
+.confirma.on{display:block}
+.confirma h3{font-size:1.4rem;margin-bottom:10px}
+.canais{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+.canais .btn{text-align:center}
+.canais-txt{color:var(--marrom-esc);max-width:24rem}
+
+/* rodapé */
+footer{border-top:var(--linha);padding:clamp(40px,6vw,64px) 0;background:var(--areia)}
+.rod{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.rod ul{display:flex;flex-wrap:wrap;gap:8px 28px}
+.rod a{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid transparent}
+.rod a:hover{border-color:var(--marrom)}
+.copy{width:100%;font-size:.75rem;letter-spacing:.14em;color:var(--marrom-esc)}
+
+/* card de captura */
+.fundo{position:fixed;inset:0;z-index:100;background:rgba(40,32,26,.6);display:none;align-items:center;justify-content:center;padding:20px}
+.fundo.on{display:flex}
+.captura{position:relative;width:100%;max-width:460px;background:var(--offwhite);border:1px solid var(--marrom);padding:clamp(32px,6vw,52px);max-height:92vh;overflow:auto}
+.captura h2{font-size:1.7rem;margin:14px 0 10px}
+.captura p{font-size:.98rem;color:var(--marrom-esc);margin-bottom:24px}
+.fechar{position:absolute;top:10px;right:10px;width:44px;height:44px;background:none;border:0;cursor:pointer;font:300 1.7rem/1 var(--corpo);color:var(--texto)}
+
+/* animação de entrada */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* responsivo */
+@media (max-width:960px){
+  .capa-grid,.sobre-grid,.contato-grid{grid-template-columns:1fr}
+  .capa-foto{max-width:420px}
+  .sobre-foto{max-width:460px}
+  .galeria,.serv,.resultados{grid-template-columns:repeat(2,1fr)}
+  .metricas{grid-template-columns:repeat(2,1fr)}
+  .metricas div:nth-child(3){border-left:0}
+  .metricas div:nth-child(n+3){border-top:var(--linha)}
+}
+@media (max-width:760px){
+  .burger{display:block}
+  .menu{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--offwhite);border-bottom:var(--linha);display:none}
+  .menu.on{display:flex}
+  .menu a{padding:18px var(--gutter);border-top:var(--linha)}
+  .dest-grid{grid-template-columns:1fr}
+  .depos{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .galeria,.serv,.resultados{grid-template-columns:1fr}
+  .capa-nums div{padding:22px 4px}
+  .btn{width:100%;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#topo" class="logo">Thayna Auni</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav aria-label="Principal">
+      <ul class="menu" id="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#destaques">Destaques</a></li>
+        <li><a href="#trabalhos">Trabalhos</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#numeros">Números</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- 00 CAPA -->
+<section class="capa" id="topo">
+  <div class="wrap">
+    <div class="capa-grid">
+      <div class="reveal">
+        <p class="rotulo">UGC Creator · Lisboa</p>
+        <h1>Thayna Auni</h1>
+        <p class="frase">Crio vídeos que parecem indicação de amiga e ajudam a sua marca a vender com confiança.</p>
+        <div class="botoes">
+          <a class="btn" href="#contato">Falar comigo</a>
+          <a class="btn suave" href="#trabalhos">Ver os trabalhos</a>
+        </div>
+      </div>
+      <!-- FOTO: para usar a foto real, apague a legenda e coloque dentro da figure: <img src="foto-capa.jpg" alt="Thayna Auni sorrindo" width="800" height="1000" loading="eager"> -->
+      <figure class="ph r45 capa-foto reveal" role="img" aria-label="Espaço reservado para a foto de Thayna Auni">
+        <figcaption>Foto da creator 4:5</figcaption>
+      </figure>
+    </div>
+
+    <div class="capa-nums reveal">
+      <div><span class="num" data-count="250">250</span><span class="num-rot">Vídeos entregues</span></div>
+      <div><span class="num" data-count="16">16</span><span class="num-rot">Marcas atendidas</span></div>
+      <div><span class="num" data-count="50" data-suffix="M">50M</span><span class="num-rot">Views somadas</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marcas" aria-label="Marcas atendidas">
+  <div class="wrap"><ul id="listaMarcas"></ul></div>
+</div>
+
+<!-- 01 SOBRE -->
+<section class="sec sobre" id="sobre">
+  <div class="wrap">
+    <div class="sobre-grid">
+      <!-- FOTO: coloque <img src="foto-sobre.jpg" alt="Thayna Auni gravando um vídeo" width="800" height="1000" loading="lazy"> dentro da figure e apague a legenda -->
+      <figure class="ph r45 sobre-foto reveal" role="img" aria-label="Espaço reservado para a foto da creator">
+        <figcaption>Foto da creator 4:5</figcaption>
+      </figure>
+      <div class="reveal">
+        <div class="sec-topo" style="margin-bottom:28px">
+          <p class="rotulo">01 Sobre</p>
+          <h2>Prazer, sou a Thayna</h2>
+        </div>
+        <p>Sou criadora de conteúdo UGC e vivo em Lisboa. Adoro pegar um produto e mostrar como ele entra na vida real, sem exagero e sem cara de anúncio.</p>
+        <p>Gravo cada vídeo com carinho, com roteiro pensado para a sua marca e uma linguagem que a sua cliente reconhece como dela.</p>
+        <ul class="promessas">
+          <li><b>01</b><span>Roteiro aprovado antes de gravar</span></li>
+          <li><b>02</b><span>Uma rodada de ajuste inclusa</span></li>
+          <li><b>03</b><span>Entrega em até 72 horas úteis</span></li>
+        </ul>
+        <p class="assinatura">Thayna Auni</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 DESTAQUES -->
+<section class="sec claro" id="destaques">
+  <div class="wrap">
+    <div class="sec-topo reveal">
+      <p class="rotulo">02 Destaques</p>
+      <h2>Conteúdos de destaque</h2>
+    </div>
+    <div class="dest-grid">
+
+      <!--
+        COMO EDITAR CADA CARD DE DESTAQUE
+        - LINK DO VÍDEO: troque o href do <a class="card"> pelo endereço do vídeo.
+        - CAPA: dentro do .ph, apague o texto da legenda e coloque
+          <img src="capa1.jpg" alt="descreva a cena" width="540" height="960" loading="lazy">
+          (imagem vertical 9:16, leve, de preferência abaixo de 200 KB).
+        - Os números e textos são placeholders: troque pelos seus dados reais.
+      -->
+
+      <!-- Destaque 1 -->
+      <a class="card reveal" href="https://youtube.com/shorts/ibjViSHyJp8" target="_blank" rel="noopener" aria-label="Assistir ao vídeo Título do conteúdo 01">
+        <div class="ph r916"><span class="legenda">Capa do vídeo 9:16</span><span class="play" aria-hidden="true"></span></div>
+        <p class="grande">+00M</p>
+        <p class="num-rot">views no reels</p>
+        <h3>Título do conteúdo 01</h3>
+        <p class="ctx">Marca 01 · uma linha de contexto sobre este vídeo.</p>
+      </a>
+
+      <!-- Destaque 2: troque o href pelo link do vídeo 2 -->
+      <a class="card reveal" href="#destaques" aria-label="Assistir ao vídeo Título do conteúdo 02">
+        <div class="ph r916"><span class="legenda">Capa do vídeo 9:16</span><span class="play" aria-hidden="true"></span></div>
+        <p class="grande">+00M</p>
+        <p class="num-rot">views no reels</p>
+        <h3>Título do conteúdo 02</h3>
+        <p class="ctx">Marca 02 · uma linha de contexto sobre este vídeo.</p>
+      </a>
+
+      <!-- Destaque 3: troque o href pelo link do vídeo 3 -->
+      <a class="card reveal" href="#destaques" aria-label="Assistir ao vídeo Título do conteúdo 03">
+        <div class="ph r916"><span class="legenda">Capa do vídeo 9:16</span><span class="play" aria-hidden="true"></span></div>
+        <p class="grande">+00M</p>
+        <p class="num-rot">views no reels</p>
+        <h3>Título do conteúdo 03</h3>
+        <p class="ctx">Marca 03 · uma linha de contexto sobre este vídeo.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 03 TRABALHOS -->
+<section class="sec" id="trabalhos">
+  <div class="wrap">
+    <div class="sec-topo reveal">
+      <p class="rotulo">03 Trabalhos</p>
+      <h2>Trabalhos por nicho</h2>
+    </div>
+    <div class="filtros reveal" id="filtros" role="group" aria-label="Filtrar trabalhos por nicho"></div>
+    <div class="galeria" id="galeria" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- 04 SERVIÇOS -->
+<section class="sec claro" id="servicos">
+  <div class="wrap">
+    <div class="sec-topo reveal">
+      <p class="rotulo">04 Serviços</p>
+      <h2>Como eu te ajudo</h2>
+    </div>
+    <div class="serv reveal" id="listaServ"></div>
+  </div>
+</section>
+
+<!-- 05 NÚMEROS E DEPOIMENTOS -->
+<section class="sec" id="numeros">
+  <div class="wrap">
+    <div class="sec-topo reveal">
+      <p class="rotulo">05 Números</p>
+      <h2>Números e depoimentos</h2>
+    </div>
+
+    <p class="sub reveal">Em números</p>
+    <div class="metricas reveal" id="listaMetricas"></div>
+
+    <p class="sub reveal">Resultados de campanha</p>
+    <div class="resultados reveal" id="listaResultados"></div>
+
+    <p class="sub reveal">O que dizem as marcas</p>
+    <div class="depos" id="listaDepos"></div>
+  </div>
+</section>
+
+<!-- 06 CONTATO -->
+<section class="sec claro" id="contato">
+  <div class="wrap">
+    <div class="sec-topo reveal">
+      <p class="rotulo">06 Contato</p>
+      <h2>Bora criar juntos</h2>
+    </div>
+    <div class="contato-grid">
+      <div class="reveal">
+        <form id="formContato" novalidate>
+          <label for="cNome">Nome</label>
+          <input id="cNome" name="nome" type="text" autocomplete="name" required>
+          <label for="cEmail">E-mail</label>
+          <input id="cEmail" name="email" type="email" autocomplete="email" required>
+          <label for="cMsg">Mensagem</label>
+          <textarea id="cMsg" name="mensagem" required></textarea>
+          <button class="btn" type="submit">Enviar mensagem</button>
+        </form>
+        <div class="confirma" id="confirma" role="status" tabindex="-1">
+          <h3>Mensagem recebida</h3>
+          <p>Obrigada pelo contato! Vou responder o mais rápido possível.</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="canais-txt">Prefere falar por outro canal? Escolha o que for mais fácil para si.</p>
+        <div class="canais">
+          <a class="btn" id="linkZap" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" id="linkMail" href="#">E-mail</a>
+          <a class="btn" id="linkInsta" href="#" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap rod">
+    <p class="logo">Thayna Auni</p>
+    <ul>
+      <li><a id="rInsta" href="#" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a id="rMail" href="#">E-mail</a></li>
+      <li><a id="rZap" href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+    <p class="copy">© <span id="ano">2026</span> Thayna Auni. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- CARD DE CAPTURA -->
+<div class="fundo" id="fundo">
+  <div class="captura" role="dialog" aria-modal="true" aria-labelledby="capTitulo">
+    <button class="fechar" id="capFechar" aria-label="Fechar">&times;</button>
+    <div id="capForm">
+      <p class="rotulo">Mídia kit</p>
+      <h2 id="capTitulo">Quer meu mídia kit completo?</h2>
+      <p>Deixe o seu nome e e-mail e eu envio para si.</p>
+      <form id="formCaptura" novalidate>
+        <label for="kNome">Nome</label>
+        <input id="kNome" type="text" autocomplete="name" required>
+        <label for="kEmail">E-mail</label>
+        <input id="kEmail" type="email" autocomplete="email" required>
+        <button class="btn" type="submit">Quero receber</button>
+      </form>
+    </div>
+    <div id="capOk" hidden>
+      <p class="rotulo">Mídia kit</p>
+      <h2>Pedido recebido</h2>
+      <p>Obrigada! Em breve o mídia kit chega ao seu e-mail.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================
+   DADOS EDITÁVEIS: mexa aqui, sem tocar no HTML
+   ===================================================== */
+
+/* Seus contatos. Para o WhatsApp use só números com código do país, ex: 351912345678 */
+var CONTATO = {
+  nome: "Thayna Auni",
+  instagram: "a_donaxepa",
+  email: "adonadaxepa@gmail.com",
+  whatsapp: "0000000000",        /* troque pelo seu número: (00) 00000-0000 */
+  cidade: "Lisboa"
+};
+
+/* Marcas da faixa da capa (troque "Marca 01" pelo nome real) */
+var MARCAS = ["Marca 01","Marca 02","Marca 03","Marca 04","Marca 05","Marca 06","Marca 07","Marca 08","Marca 09","Marca 10","Marca 11","Marca 12"];
+
+/* Trabalhos da galeria.
+   nicho: define o botão de filtro (crie nichos novos à vontade)
+   Para usar imagem real: adicione img: "trabalho1.jpg" (leve, formato 4:5) */
+var TRABALHOS = [
+  { nicho: "Beleza",     titulo: "Trabalho 01", marca: "Marca 01", formato: "Vídeo UGC 4:5" },
+  { nicho: "Beleza",     titulo: "Trabalho 02", marca: "Marca 02", formato: "Fotos do produto 4:5" },
+  { nicho: "Moda",       titulo: "Trabalho 03", marca: "Marca 03", formato: "Vídeo UGC 4:5" },
+  { nicho: "Moda",       titulo: "Trabalho 04", marca: "Marca 04", formato: "Unboxing 4:5" },
+  { nicho: "Casa",       titulo: "Trabalho 05", marca: "Marca 05", formato: "Corte para anúncio 4:5" },
+  { nicho: "Casa",       titulo: "Trabalho 06", marca: "Marca 06", formato: "Vídeo UGC 4:5" },
+  { nicho: "Bem-estar",  titulo: "Trabalho 07", marca: "Marca 07", formato: "Fotos do produto 4:5" },
+  { nicho: "Bem-estar",  titulo: "Trabalho 08", marca: "Marca 08", formato: "Vídeo UGC 4:5" },
+  { nicho: "Alimentos",  titulo: "Trabalho 09", marca: "Marca 09", formato: "Unboxing 4:5" }
+];
+
+/* Serviços (o número é gerado sozinho) */
+var SERVICOS = [
+  { titulo: "Vídeo UGC",              texto: "Vídeo gravado por mim, com roteiro combinado e cara de conteúdo real." },
+  { titulo: "Corte para anúncio",     texto: "Versões curtas e diretas, prontas para rodar como anúncio pago." },
+  { titulo: "Fotos do produto",       texto: "Fotos naturais do produto em uso, em luz suave e ambiente de rotina." },
+  { titulo: "Unboxing",               texto: "A abertura da embalagem, gravada com curiosidade e primeiras impressões." },
+  { titulo: "Publicação no meu perfil", texto: "Seu produto apresentado ao meu público, com legenda e marcação da marca." },
+  { titulo: "Pacote mensal",          texto: "Entregas recorrentes todo mês, com planejamento e preço combinado." }
+];
+
+/* Métricas animadas. valor: número final, sufixo: texto depois do número */
+var METRICAS = [
+  { valor: 250, sufixo: "",   rotulo: "Vídeos entregues" },
+  { valor: 16,  sufixo: "",   rotulo: "Marcas atendidas" },
+  { valor: 50,  sufixo: "M",  rotulo: "Views somadas" },
+  { valor: 72,  sufixo: "h",  rotulo: "Prazo de entrega, em horas úteis" }
+];
+
+/* Resultados de campanha (placeholders: troque pelos seus dados reais) */
+var RESULTADOS = [
+  { numero: "+00%", titulo: "Resultado 01", texto: "Descreva aqui o resultado da campanha da Marca 01." },
+  { numero: "+00%", titulo: "Resultado 02", texto: "Descreva aqui o resultado da campanha da Marca 02." },
+  { numero: "+00%", titulo: "Resultado 03", texto: "Descreva aqui o resultado da campanha da Marca 03." }
+];
+
+/* Depoimentos (placeholders: troque pelo texto real de cada cliente) */
+var DEPOIMENTOS = [
+  { texto: "Escreva aqui o depoimento do Cliente 01 sobre o seu trabalho.", nome: "Cliente 01", empresa: "Marca 01" },
+  { texto: "Escreva aqui o depoimento do Cliente 02 sobre o seu trabalho.", nome: "Cliente 02", empresa: "Marca 02" },
+  { texto: "Escreva aqui o depoimento do Cliente 03 sobre o seu trabalho.", nome: "Cliente 03", empresa: "Marca 03" },
+  { texto: "Escreva aqui o depoimento do Cliente 04 sobre o seu trabalho.", nome: "Cliente 04", empresa: "Marca 04" }
+];
+
+/* =====================================================
+   CÓDIGO (não precisa mexer daqui para baixo)
+   ===================================================== */
+document.documentElement.classList.add("js");
+var $ = function (s) { return document.querySelector(s); };
+var semMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function el(tag, cls, txt) {
+  var e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (txt !== undefined) e.textContent = txt;
+  return e;
+}
+function pad(n) { return (n < 10 ? "0" : "") + n; }
+
+/* contatos */
+var linkZap = "https://wa.me/" + CONTATO.whatsapp;
+var linkInsta = "https://instagram.com/" + CONTATO.instagram;
+var linkMail = "mailto:" + CONTATO.email;
+[["#linkZap","#rZap"]].forEach(function (p) { $(p[0]).href = linkZap; $(p[1]).href = linkZap; });
+$("#linkInsta").href = linkInsta; $("#rInsta").href = linkInsta;
+$("#linkMail").href = linkMail; $("#rMail").href = linkMail;
+$("#ano").textContent = new Date().getFullYear();
+
+/* faixa de marcas */
+MARCAS.forEach(function (m) { $("#listaMarcas").appendChild(el("li", "", m)); });
+
+/* serviços */
+SERVICOS.forEach(function (s, i) {
+  var a = el("article");
+  a.appendChild(el("span", "n", pad(i + 1)));
+  a.appendChild(el("h3", "", s.titulo));
+  a.appendChild(el("p", "", s.texto));
+  $("#listaServ").appendChild(a);
+});
+
+/* métricas */
+METRICAS.forEach(function (m) {
+  var d = el("div");
+  var n = el("span", "num", m.valor + m.sufixo);
+  n.dataset.count = m.valor; n.dataset.suffix = m.sufixo;
+  d.appendChild(n);
+  d.appendChild(el("span", "num-rot", m.rotulo));
+  $("#listaMetricas").appendChild(d);
+});
+
+/* resultados */
+RESULTADOS.forEach(function (r) {
+  var a = el("article");
+  a.appendChild(el("span", "num", r.numero));
+  a.appendChild(el("h3", "", r.titulo));
+  a.appendChild(el("p", "", r.texto));
+  $("#listaResultados").appendChild(a);
+});
+
+/* depoimentos */
+DEPOIMENTOS.forEach(function (d) {
+  var f = el("figure", "reveal");
+  var b = el("blockquote"); b.appendChild(el("p", "", "“" + d.texto + "”"));
+  var c = el("figcaption");
+  c.appendChild(el("b", "", d.nome));
+  c.appendChild(el("span", "", d.empresa));
+  f.appendChild(b); f.appendChild(c);
+  $("#listaDepos").appendChild(f);
+});
+
+/* galeria + filtros */
+var nichos = ["Todos"];
+TRABALHOS.forEach(function (t) { if (nichos.indexOf(t.nicho) < 0) nichos.push(t.nicho); });
+var itens = TRABALHOS.map(function (t) {
+  var f = el("figure", "trab");
+  var ph = el("div", "ph r45");
+  if (t.img) {
+    var im = document.createElement("img");
+    im.src = t.img; im.alt = t.titulo + " para " + t.marca; im.loading = "lazy";
+    ph.appendChild(im);
+  }
+  /* SEM IMAGEM: mostra a legenda com o formato. COM IMAGEM: adicione img no array TRABALHOS */
+  ph.appendChild(el("span", "legenda", t.formato));
+  ph.setAttribute("role", "img");
+  ph.setAttribute("aria-label", t.titulo + ", " + t.nicho + ", " + t.marca);
+  f.appendChild(ph);
+  f.appendChild(el("h3", "", t.titulo));
+  f.appendChild(el("p", "", t.nicho + " · " + t.marca));
+  $("#galeria").appendChild(f);
+  return { no: f, nicho: t.nicho };
+});
+nichos.forEach(function (n, i) {
+  var b = el("button", "", n);
+  b.type = "button";
+  b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+  b.addEventListener("click", function () {
+    document.querySelectorAll("#filtros button").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+    b.setAttribute("aria-pressed", "true");
+    itens.forEach(function (it) { it.no.hidden = !(n === "Todos" || it.nicho === n); });
+  });
+  $("#filtros").appendChild(b);
+});
+
+/* menu sanduíche */
+var burger = $("#burger"), menu = $("#menu");
+function menuToggle(abrir) {
+  menu.classList.toggle("on", abrir);
+  burger.setAttribute("aria-expanded", abrir ? "true" : "false");
+  burger.setAttribute("aria-label", abrir ? "Fechar menu" : "Abrir menu");
+}
+burger.addEventListener("click", function () { menuToggle(!menu.classList.contains("on")); });
+menu.addEventListener("click", function (e) { if (e.target.tagName === "A") menuToggle(false); });
+
+/* contadores */
+function contar(no) {
+  var alvo = parseFloat(no.dataset.count), suf = no.dataset.suffix || "";
+  if (semMovimento) { no.textContent = alvo + suf; return; }
+  var ini = null, dur = 1600;
+  function passo(t) {
+    if (ini === null) ini = t;
+    var p = Math.min((t - ini) / dur, 1);
+    var e = 1 - Math.pow(1 - p, 3);
+    no.textContent = Math.round(alvo * e) + suf;
+    if (p < 1) requestAnimationFrame(passo);
+  }
+  requestAnimationFrame(passo);
+}
+
+/* animação ao rolar */
+var revelar = document.querySelectorAll(".reveal");
+var contadores = document.querySelectorAll("[data-count]");
+if ("IntersectionObserver" in window) {
+  var ob = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); ob.unobserve(e.target); }
+    });
+  }, { threshold: .12 });
+  revelar.forEach(function (n) { ob.observe(n); });
+  var ob2 = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) { contar(e.target); ob2.unobserve(e.target); }
+    });
+  }, { threshold: .6 });
+  contadores.forEach(function (n) { ob2.observe(n); });
+} else {
+  revelar.forEach(function (n) { n.classList.add("in"); });
+}
+
+/* formulário de contato: confirmação na própria tela.
+   Ele ainda não envia a mensagem para lugar nenhum; para receber, ligue a um serviço de formulários. */
+$("#formContato").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var f = e.target;
+  if (!f.checkValidity()) { f.reportValidity(); return; }
+  f.style.display = "none";
+  var c = $("#confirma");
+  c.classList.add("on");
+  c.focus();
+});
+
+/* card de captura */
+var fundo = $("#fundo"), ultimoFoco = null;
+function abrirCard() {
+  ultimoFoco = document.activeElement;
+  fundo.classList.add("on");
+  $("#kNome").focus();
+}
+function fecharCard() {
+  fundo.classList.remove("on");
+  if (ultimoFoco && ultimoFoco.focus) ultimoFoco.focus();
+}
+var jaViu = false;
+try { jaViu = sessionStorage.getItem("mk-visto") === "1"; } catch (err) {}
+if (!jaViu) {
+  setTimeout(function () {
+    abrirCard();
+    try { sessionStorage.setItem("mk-visto", "1"); } catch (err) {}
+  }, 7000);
+}
+$("#capFechar").addEventListener("click", fecharCard);
+fundo.addEventListener("click", function (e) { if (e.target === fundo) fecharCard(); });
+document.addEventListener("keydown", function (e) {
+  if (e.key !== "Escape") return;
+  if (fundo.classList.contains("on")) fecharCard();
+  else if (menu.classList.contains("on")) menuToggle(false);
+});
+/* prende o Tab dentro do card aberto */
+fundo.addEventListener("keydown", function (e) {
+  if (e.key !== "Tab") return;
+  var f = fundo.querySelectorAll("button,input");
+  var vis = Array.prototype.filter.call(f, function (x) { return x.offsetParent !== null; });
+  if (!vis.length) return;
+  var p = vis[0], u = vis[vis.length - 1];
+  if (e.shiftKey && document.activeElement === p) { e.preventDefault(); u.focus(); }
+  else if (!e.shiftKey && document.activeElement === u) { e.preventDefault(); p.focus(); }
+});
+$("#formCaptura").addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (!e.target.checkValidity()) { e.target.reportValidity(); return; }
+  $("#capForm").hidden = true;
+  $("#capOk").hidden = false;
+});
+</script>
+</body>
+</html>
